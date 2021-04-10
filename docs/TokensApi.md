@@ -1,6 +1,6 @@
 # Com.Lab5e.User.Api.TokensApi
 
-All URIs are relative to *https://api.lab5e.com/user*
+All URIs are relative to *https://api.lab5e.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -32,7 +32,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.lab5e.com/user";
+            config.BasePath = "https://api.lab5e.com";
             // Configure API key authorization: APIToken
             config.AddApiKey("X-API-Token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -113,7 +113,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.lab5e.com/user";
+            config.BasePath = "https://api.lab5e.com";
             // Configure API key authorization: APIToken
             config.AddApiKey("X-API-Token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -194,7 +194,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.lab5e.com/user";
+            config.BasePath = "https://api.lab5e.com";
             // Configure API key authorization: APIToken
             config.AddApiKey("X-API-Token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -271,7 +271,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.lab5e.com/user";
+            config.BasePath = "https://api.lab5e.com";
             // Configure API key authorization: APIToken
             config.AddApiKey("X-API-Token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -352,7 +352,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.lab5e.com/user";
+            config.BasePath = "https://api.lab5e.com";
             // Configure API key authorization: APIToken
             config.AddApiKey("X-API-Token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
