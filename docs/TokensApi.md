@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 <a name="userdeletetoken"></a>
 # **UserDeleteToken**
-> Object UserDeleteToken (string token)
+> DeleteTokenResponse UserDeleteToken (string token)
 
 Remove token
 
@@ -125,7 +125,7 @@ namespace Example
             try
             {
                 // Remove token
-                Object result = apiInstance.UserDeleteToken(token);
+                DeleteTokenResponse result = apiInstance.UserDeleteToken(token);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**DeleteTokenResponse**](DeleteTokenResponse.md)
 
 ### Authorization
 

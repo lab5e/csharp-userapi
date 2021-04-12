@@ -27,41 +27,25 @@ using OpenAPIDateConverter = Com.Lab5e.User.Client.OpenAPIDateConverter;
 namespace Com.Lab5e.User.Model
 {
     /// <summary>
-    /// RpcStatus
+    /// DeleteInviteResponse
     /// </summary>
-    [DataContract(Name = "rpcStatus")]
-    public partial class RpcStatus : IEquatable<RpcStatus>, IValidatableObject
+    [DataContract(Name = "DeleteInviteResponse")]
+    public partial class DeleteInviteResponse : IEquatable<DeleteInviteResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RpcStatus" /> class.
+        /// Initializes a new instance of the <see cref="DeleteInviteResponse" /> class.
         /// </summary>
-        /// <param name="code">code.</param>
-        /// <param name="message">message.</param>
-        /// <param name="details">details.</param>
-        public RpcStatus(int code = default(int), string message = default(string), List<ProtobufAny> details = default(List<ProtobufAny>))
+        /// <param name="invite">invite.</param>
+        public DeleteInviteResponse(Invite invite = default(Invite))
         {
-            this.Code = code;
-            this.Message = message;
-            this.Details = details;
+            this.Invite = invite;
         }
 
         /// <summary>
-        /// Gets or Sets Code
+        /// Gets or Sets Invite
         /// </summary>
-        [DataMember(Name = "code", EmitDefaultValue = false)]
-        public int Code { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Message
-        /// </summary>
-        [DataMember(Name = "message", EmitDefaultValue = false)]
-        public string Message { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Details
-        /// </summary>
-        [DataMember(Name = "details", EmitDefaultValue = false)]
-        public List<ProtobufAny> Details { get; set; }
+        [DataMember(Name = "invite", EmitDefaultValue = false)]
+        public Invite Invite { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -70,10 +54,8 @@ namespace Com.Lab5e.User.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RpcStatus {\n");
-            sb.Append("  Code: ").Append(Code).Append("\n");
-            sb.Append("  Message: ").Append(Message).Append("\n");
-            sb.Append("  Details: ").Append(Details).Append("\n");
+            sb.Append("class DeleteInviteResponse {\n");
+            sb.Append("  Invite: ").Append(Invite).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,34 +76,24 @@ namespace Com.Lab5e.User.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RpcStatus);
+            return this.Equals(input as DeleteInviteResponse);
         }
 
         /// <summary>
-        /// Returns true if RpcStatus instances are equal
+        /// Returns true if DeleteInviteResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of RpcStatus to be compared</param>
+        /// <param name="input">Instance of DeleteInviteResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RpcStatus input)
+        public bool Equals(DeleteInviteResponse input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Code == input.Code ||
-                    this.Code.Equals(input.Code)
-                ) && 
-                (
-                    this.Message == input.Message ||
-                    (this.Message != null &&
-                    this.Message.Equals(input.Message))
-                ) && 
-                (
-                    this.Details == input.Details ||
-                    this.Details != null &&
-                    input.Details != null &&
-                    this.Details.SequenceEqual(input.Details)
+                    this.Invite == input.Invite ||
+                    (this.Invite != null &&
+                    this.Invite.Equals(input.Invite))
                 );
         }
 
@@ -134,11 +106,8 @@ namespace Com.Lab5e.User.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Code.GetHashCode();
-                if (this.Message != null)
-                    hashCode = hashCode * 59 + this.Message.GetHashCode();
-                if (this.Details != null)
-                    hashCode = hashCode * 59 + this.Details.GetHashCode();
+                if (this.Invite != null)
+                    hashCode = hashCode * 59 + this.Invite.GetHashCode();
                 return hashCode;
             }
         }
