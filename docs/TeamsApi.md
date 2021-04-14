@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 <a name="userdeleteinvite"></a>
 # **UserDeleteInvite**
-> DeleteInviteResponse UserDeleteInvite (string teamId, string code)
+> Object UserDeleteInvite (string teamId, string code)
 
 Delete invite
 
@@ -220,7 +220,7 @@ namespace Example
             try
             {
                 // Delete invite
-                DeleteInviteResponse result = apiInstance.UserDeleteInvite(teamId, code);
+                Object result = apiInstance.UserDeleteInvite(teamId, code);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteInviteResponse**](DeleteInviteResponse.md)
+**Object**
 
 ### Authorization
 
