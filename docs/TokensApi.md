@@ -4,16 +4,16 @@ All URIs are relative to *https://api.lab5e.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UserCreateToken**](TokensApi.md#usercreatetoken) | **POST** /user/tokens | Create token
-[**UserDeleteToken**](TokensApi.md#userdeletetoken) | **DELETE** /user/tokens/{token} | Remove token
-[**UserListTokens**](TokensApi.md#userlisttokens) | **GET** /user/tokens | List tokens
-[**UserRetrieveToken**](TokensApi.md#userretrievetoken) | **GET** /user/tokens/{token} | Retrieve token
-[**UserUpdateToken**](TokensApi.md#userupdatetoken) | **PATCH** /user/tokens/{token} | Update token
+[**CreateToken**](TokensApi.md#createtoken) | **POST** /user/tokens | Create token
+[**DeleteToken**](TokensApi.md#deletetoken) | **DELETE** /user/tokens/{token} | Remove token
+[**ListTokens**](TokensApi.md#listtokens) | **GET** /user/tokens | List tokens
+[**RetrieveToken**](TokensApi.md#retrievetoken) | **GET** /user/tokens/{token} | Retrieve token
+[**UpdateToken**](TokensApi.md#updatetoken) | **PATCH** /user/tokens/{token} | Update token
 
 
-<a name="usercreatetoken"></a>
-# **UserCreateToken**
-> Token UserCreateToken (Token body)
+<a name="createtoken"></a>
+# **CreateToken**
+> Token CreateToken (Token body)
 
 Create token
 
@@ -27,7 +27,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserCreateTokenExample
+    public class CreateTokenExample
     {
         public static void Main()
         {
@@ -44,12 +44,12 @@ namespace Example
             try
             {
                 // Create token
-                Token result = apiInstance.UserCreateToken(body);
+                Token result = apiInstance.CreateToken(body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TokensApi.UserCreateToken: " + e.Message );
+                Debug.Print("Exception when calling TokensApi.CreateToken: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -92,9 +92,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userdeletetoken"></a>
-# **UserDeleteToken**
-> Object UserDeleteToken (string token)
+<a name="deletetoken"></a>
+# **DeleteToken**
+> DeleteTokenResponse DeleteToken (string token)
 
 Remove token
 
@@ -108,7 +108,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserDeleteTokenExample
+    public class DeleteTokenExample
     {
         public static void Main()
         {
@@ -125,12 +125,12 @@ namespace Example
             try
             {
                 // Remove token
-                Object result = apiInstance.UserDeleteToken(token);
+                DeleteTokenResponse result = apiInstance.DeleteToken(token);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TokensApi.UserDeleteToken: " + e.Message );
+                Debug.Print("Exception when calling TokensApi.DeleteToken: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**DeleteTokenResponse**](DeleteTokenResponse.md)
 
 ### Authorization
 
@@ -173,9 +173,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userlisttokens"></a>
-# **UserListTokens**
-> TokenList UserListTokens ()
+<a name="listtokens"></a>
+# **ListTokens**
+> TokenList ListTokens ()
 
 List tokens
 
@@ -189,7 +189,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserListTokensExample
+    public class ListTokensExample
     {
         public static void Main()
         {
@@ -205,12 +205,12 @@ namespace Example
             try
             {
                 // List tokens
-                TokenList result = apiInstance.UserListTokens();
+                TokenList result = apiInstance.ListTokens();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TokensApi.UserListTokens: " + e.Message );
+                Debug.Print("Exception when calling TokensApi.ListTokens: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -250,9 +250,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userretrievetoken"></a>
-# **UserRetrieveToken**
-> Token UserRetrieveToken (string token)
+<a name="retrievetoken"></a>
+# **RetrieveToken**
+> Token RetrieveToken (string token)
 
 Retrieve token
 
@@ -266,7 +266,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserRetrieveTokenExample
+    public class RetrieveTokenExample
     {
         public static void Main()
         {
@@ -283,12 +283,12 @@ namespace Example
             try
             {
                 // Retrieve token
-                Token result = apiInstance.UserRetrieveToken(token);
+                Token result = apiInstance.RetrieveToken(token);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TokensApi.UserRetrieveToken: " + e.Message );
+                Debug.Print("Exception when calling TokensApi.RetrieveToken: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -331,9 +331,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userupdatetoken"></a>
-# **UserUpdateToken**
-> Token UserUpdateToken (string token, Token body)
+<a name="updatetoken"></a>
+# **UpdateToken**
+> Token UpdateToken (string token, Token body)
 
 Update token
 
@@ -347,7 +347,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserUpdateTokenExample
+    public class UpdateTokenExample
     {
         public static void Main()
         {
@@ -365,12 +365,12 @@ namespace Example
             try
             {
                 // Update token
-                Token result = apiInstance.UserUpdateToken(token, body);
+                Token result = apiInstance.UpdateToken(token, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TokensApi.UserUpdateToken: " + e.Message );
+                Debug.Print("Exception when calling TokensApi.UpdateToken: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

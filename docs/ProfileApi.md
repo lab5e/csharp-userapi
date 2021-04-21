@@ -4,12 +4,12 @@ All URIs are relative to *https://api.lab5e.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UserGetUserProfile**](ProfileApi.md#usergetuserprofile) | **GET** /user/profile | Logged in profile
+[**GetUserProfile**](ProfileApi.md#getuserprofile) | **GET** /user/profile | Logged in profile
 
 
-<a name="usergetuserprofile"></a>
-# **UserGetUserProfile**
-> UserProfile UserGetUserProfile ()
+<a name="getuserprofile"></a>
+# **GetUserProfile**
+> UserProfile GetUserProfile ()
 
 Logged in profile
 
@@ -25,7 +25,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserGetUserProfileExample
+    public class GetUserProfileExample
     {
         public static void Main()
         {
@@ -41,12 +41,12 @@ namespace Example
             try
             {
                 // Logged in profile
-                UserProfile result = apiInstance.UserGetUserProfile();
+                UserProfile result = apiInstance.GetUserProfile();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProfileApi.UserGetUserProfile: " + e.Message );
+                Debug.Print("Exception when calling ProfileApi.GetUserProfile: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

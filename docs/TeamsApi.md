@@ -4,25 +4,25 @@ All URIs are relative to *https://api.lab5e.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UserAcceptInvite**](TeamsApi.md#useracceptinvite) | **POST** /user/teams/accept | Accept invite
-[**UserCreateTeam**](TeamsApi.md#usercreateteam) | **POST** /user/teams | Create team
-[**UserDeleteInvite**](TeamsApi.md#userdeleteinvite) | **DELETE** /user/teams/{teamId}/invites/{code} | Delete invite
-[**UserDeleteMember**](TeamsApi.md#userdeletemember) | **DELETE** /user/teams/{teamId}/members/{userId} | Remove member
-[**UserDeleteTeam**](TeamsApi.md#userdeleteteam) | **DELETE** /user/teams/{teamId} | Remove team
-[**UserGenerateInvite**](TeamsApi.md#usergenerateinvite) | **POST** /user/teams/{teamId}/invites | Generate invite
-[**UserListInvites**](TeamsApi.md#userlistinvites) | **GET** /user/teams/{teamId}/invites | List invites
-[**UserListTeams**](TeamsApi.md#userlistteams) | **GET** /user/teams | List teams
-[**UserRetrieveInvite**](TeamsApi.md#userretrieveinvite) | **GET** /user/teams/{teamId}/invites/{code} | Retrieve invite
-[**UserRetrieveMember**](TeamsApi.md#userretrievemember) | **GET** /user/teams/{teamId}/members/{userId} | Retrieve member
-[**UserRetrieveTeam**](TeamsApi.md#userretrieveteam) | **GET** /user/teams/{teamId} | Retrieve team
-[**UserRetrieveTeamMembers**](TeamsApi.md#userretrieveteammembers) | **GET** /user/teams/{teamId}/members | List members
-[**UserUpdateMember**](TeamsApi.md#userupdatemember) | **PATCH** /user/teams/{teamId}/members/{userId} | Update member
-[**UserUpdateTeam**](TeamsApi.md#userupdateteam) | **PATCH** /user/teams/{teamId} | Update team
+[**AcceptInvite**](TeamsApi.md#acceptinvite) | **POST** /user/teams/accept | Accept invite
+[**CreateTeam**](TeamsApi.md#createteam) | **POST** /user/teams | Create team
+[**DeleteInvite**](TeamsApi.md#deleteinvite) | **DELETE** /user/teams/{teamId}/invites/{code} | Delete invite
+[**DeleteMember**](TeamsApi.md#deletemember) | **DELETE** /user/teams/{teamId}/members/{userId} | Remove member
+[**DeleteTeam**](TeamsApi.md#deleteteam) | **DELETE** /user/teams/{teamId} | Remove team
+[**GenerateInvite**](TeamsApi.md#generateinvite) | **POST** /user/teams/{teamId}/invites | Generate invite
+[**ListInvites**](TeamsApi.md#listinvites) | **GET** /user/teams/{teamId}/invites | List invites
+[**ListTeams**](TeamsApi.md#listteams) | **GET** /user/teams | List teams
+[**RetrieveInvite**](TeamsApi.md#retrieveinvite) | **GET** /user/teams/{teamId}/invites/{code} | Retrieve invite
+[**RetrieveMember**](TeamsApi.md#retrievemember) | **GET** /user/teams/{teamId}/members/{userId} | Retrieve member
+[**RetrieveTeam**](TeamsApi.md#retrieveteam) | **GET** /user/teams/{teamId} | Retrieve team
+[**RetrieveTeamMembers**](TeamsApi.md#retrieveteammembers) | **GET** /user/teams/{teamId}/members | List members
+[**UpdateMember**](TeamsApi.md#updatemember) | **PATCH** /user/teams/{teamId}/members/{userId} | Update member
+[**UpdateTeam**](TeamsApi.md#updateteam) | **PATCH** /user/teams/{teamId} | Update team
 
 
-<a name="useracceptinvite"></a>
-# **UserAcceptInvite**
-> Team UserAcceptInvite (AcceptInviteRequest body)
+<a name="acceptinvite"></a>
+# **AcceptInvite**
+> Team AcceptInvite (AcceptInviteRequest body)
 
 Accept invite
 
@@ -38,7 +38,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserAcceptInviteExample
+    public class AcceptInviteExample
     {
         public static void Main()
         {
@@ -55,12 +55,12 @@ namespace Example
             try
             {
                 // Accept invite
-                Team result = apiInstance.UserAcceptInvite(body);
+                Team result = apiInstance.AcceptInvite(body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TeamsApi.UserAcceptInvite: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.AcceptInvite: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -103,9 +103,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="usercreateteam"></a>
-# **UserCreateTeam**
-> Team UserCreateTeam (Team body)
+<a name="createteam"></a>
+# **CreateTeam**
+> Team CreateTeam (Team body)
 
 Create team
 
@@ -119,7 +119,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserCreateTeamExample
+    public class CreateTeamExample
     {
         public static void Main()
         {
@@ -136,12 +136,12 @@ namespace Example
             try
             {
                 // Create team
-                Team result = apiInstance.UserCreateTeam(body);
+                Team result = apiInstance.CreateTeam(body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TeamsApi.UserCreateTeam: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.CreateTeam: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -184,9 +184,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userdeleteinvite"></a>
-# **UserDeleteInvite**
-> Object UserDeleteInvite (string teamId, string code)
+<a name="deleteinvite"></a>
+# **DeleteInvite**
+> DeleteInviteResponse DeleteInvite (string teamId, string code)
 
 Delete invite
 
@@ -202,7 +202,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserDeleteInviteExample
+    public class DeleteInviteExample
     {
         public static void Main()
         {
@@ -220,12 +220,12 @@ namespace Example
             try
             {
                 // Delete invite
-                Object result = apiInstance.UserDeleteInvite(teamId, code);
+                DeleteInviteResponse result = apiInstance.DeleteInvite(teamId, code);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TeamsApi.UserDeleteInvite: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.DeleteInvite: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**DeleteInviteResponse**](DeleteInviteResponse.md)
 
 ### Authorization
 
@@ -269,9 +269,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userdeletemember"></a>
-# **UserDeleteMember**
-> Member UserDeleteMember (string teamId, string userId)
+<a name="deletemember"></a>
+# **DeleteMember**
+> Member DeleteMember (string teamId, string userId)
 
 Remove member
 
@@ -287,7 +287,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserDeleteMemberExample
+    public class DeleteMemberExample
     {
         public static void Main()
         {
@@ -305,12 +305,12 @@ namespace Example
             try
             {
                 // Remove member
-                Member result = apiInstance.UserDeleteMember(teamId, userId);
+                Member result = apiInstance.DeleteMember(teamId, userId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TeamsApi.UserDeleteMember: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.DeleteMember: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -354,9 +354,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userdeleteteam"></a>
-# **UserDeleteTeam**
-> Team UserDeleteTeam (string teamId)
+<a name="deleteteam"></a>
+# **DeleteTeam**
+> Team DeleteTeam (string teamId)
 
 Remove team
 
@@ -372,7 +372,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserDeleteTeamExample
+    public class DeleteTeamExample
     {
         public static void Main()
         {
@@ -389,12 +389,12 @@ namespace Example
             try
             {
                 // Remove team
-                Team result = apiInstance.UserDeleteTeam(teamId);
+                Team result = apiInstance.DeleteTeam(teamId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TeamsApi.UserDeleteTeam: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.DeleteTeam: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -437,9 +437,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="usergenerateinvite"></a>
-# **UserGenerateInvite**
-> Invite UserGenerateInvite (string teamId, InviteRequest body)
+<a name="generateinvite"></a>
+# **GenerateInvite**
+> Invite GenerateInvite (string teamId, InviteRequest body)
 
 Generate invite
 
@@ -455,7 +455,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserGenerateInviteExample
+    public class GenerateInviteExample
     {
         public static void Main()
         {
@@ -473,12 +473,12 @@ namespace Example
             try
             {
                 // Generate invite
-                Invite result = apiInstance.UserGenerateInvite(teamId, body);
+                Invite result = apiInstance.GenerateInvite(teamId, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TeamsApi.UserGenerateInvite: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.GenerateInvite: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -522,9 +522,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userlistinvites"></a>
-# **UserListInvites**
-> InviteList UserListInvites (string teamId)
+<a name="listinvites"></a>
+# **ListInvites**
+> InviteList ListInvites (string teamId)
 
 List invites
 
@@ -540,7 +540,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserListInvitesExample
+    public class ListInvitesExample
     {
         public static void Main()
         {
@@ -557,12 +557,12 @@ namespace Example
             try
             {
                 // List invites
-                InviteList result = apiInstance.UserListInvites(teamId);
+                InviteList result = apiInstance.ListInvites(teamId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TeamsApi.UserListInvites: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.ListInvites: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -605,9 +605,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userlistteams"></a>
-# **UserListTeams**
-> TeamList UserListTeams ()
+<a name="listteams"></a>
+# **ListTeams**
+> TeamList ListTeams ()
 
 List teams
 
@@ -623,7 +623,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserListTeamsExample
+    public class ListTeamsExample
     {
         public static void Main()
         {
@@ -639,12 +639,12 @@ namespace Example
             try
             {
                 // List teams
-                TeamList result = apiInstance.UserListTeams();
+                TeamList result = apiInstance.ListTeams();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TeamsApi.UserListTeams: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.ListTeams: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -684,9 +684,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userretrieveinvite"></a>
-# **UserRetrieveInvite**
-> Invite UserRetrieveInvite (string teamId, string code)
+<a name="retrieveinvite"></a>
+# **RetrieveInvite**
+> Invite RetrieveInvite (string teamId, string code)
 
 Retrieve invite
 
@@ -702,7 +702,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserRetrieveInviteExample
+    public class RetrieveInviteExample
     {
         public static void Main()
         {
@@ -720,12 +720,12 @@ namespace Example
             try
             {
                 // Retrieve invite
-                Invite result = apiInstance.UserRetrieveInvite(teamId, code);
+                Invite result = apiInstance.RetrieveInvite(teamId, code);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TeamsApi.UserRetrieveInvite: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.RetrieveInvite: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -769,9 +769,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userretrievemember"></a>
-# **UserRetrieveMember**
-> Member UserRetrieveMember (string teamId, string userId)
+<a name="retrievemember"></a>
+# **RetrieveMember**
+> Member RetrieveMember (string teamId, string userId)
 
 Retrieve member
 
@@ -785,7 +785,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserRetrieveMemberExample
+    public class RetrieveMemberExample
     {
         public static void Main()
         {
@@ -803,12 +803,12 @@ namespace Example
             try
             {
                 // Retrieve member
-                Member result = apiInstance.UserRetrieveMember(teamId, userId);
+                Member result = apiInstance.RetrieveMember(teamId, userId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TeamsApi.UserRetrieveMember: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.RetrieveMember: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -852,9 +852,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userretrieveteam"></a>
-# **UserRetrieveTeam**
-> Team UserRetrieveTeam (string teamId)
+<a name="retrieveteam"></a>
+# **RetrieveTeam**
+> Team RetrieveTeam (string teamId)
 
 Retrieve team
 
@@ -868,7 +868,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserRetrieveTeamExample
+    public class RetrieveTeamExample
     {
         public static void Main()
         {
@@ -885,12 +885,12 @@ namespace Example
             try
             {
                 // Retrieve team
-                Team result = apiInstance.UserRetrieveTeam(teamId);
+                Team result = apiInstance.RetrieveTeam(teamId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TeamsApi.UserRetrieveTeam: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.RetrieveTeam: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -933,9 +933,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userretrieveteammembers"></a>
-# **UserRetrieveTeamMembers**
-> MemberList UserRetrieveTeamMembers (string teamId)
+<a name="retrieveteammembers"></a>
+# **RetrieveTeamMembers**
+> MemberList RetrieveTeamMembers (string teamId)
 
 List members
 
@@ -949,7 +949,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserRetrieveTeamMembersExample
+    public class RetrieveTeamMembersExample
     {
         public static void Main()
         {
@@ -966,12 +966,12 @@ namespace Example
             try
             {
                 // List members
-                MemberList result = apiInstance.UserRetrieveTeamMembers(teamId);
+                MemberList result = apiInstance.RetrieveTeamMembers(teamId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TeamsApi.UserRetrieveTeamMembers: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.RetrieveTeamMembers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1014,9 +1014,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userupdatemember"></a>
-# **UserUpdateMember**
-> Member UserUpdateMember (string teamId, string userId, Member body)
+<a name="updatemember"></a>
+# **UpdateMember**
+> Member UpdateMember (string teamId, string userId, Member body)
 
 Update member
 
@@ -1032,7 +1032,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserUpdateMemberExample
+    public class UpdateMemberExample
     {
         public static void Main()
         {
@@ -1051,12 +1051,12 @@ namespace Example
             try
             {
                 // Update member
-                Member result = apiInstance.UserUpdateMember(teamId, userId, body);
+                Member result = apiInstance.UpdateMember(teamId, userId, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TeamsApi.UserUpdateMember: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.UpdateMember: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1101,9 +1101,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="userupdateteam"></a>
-# **UserUpdateTeam**
-> Team UserUpdateTeam (string teamId, Team body)
+<a name="updateteam"></a>
+# **UpdateTeam**
+> Team UpdateTeam (string teamId, Team body)
 
 Update team
 
@@ -1119,7 +1119,7 @@ using Com.Lab5e.User.Model;
 
 namespace Example
 {
-    public class UserUpdateTeamExample
+    public class UpdateTeamExample
     {
         public static void Main()
         {
@@ -1137,12 +1137,12 @@ namespace Example
             try
             {
                 // Update team
-                Team result = apiInstance.UserUpdateTeam(teamId, body);
+                Team result = apiInstance.UpdateTeam(teamId, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TeamsApi.UserUpdateTeam: " + e.Message );
+                Debug.Print("Exception when calling TeamsApi.UpdateTeam: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

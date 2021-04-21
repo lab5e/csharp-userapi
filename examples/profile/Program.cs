@@ -26,7 +26,7 @@ namespace profile
             try
             {
                 // ..and retrieve the profile.
-                var profile = profileApi.UserGetUserProfile();
+                var profile = profileApi.GetUserProfile();
                 Console.WriteLine("Profile");
                 Console.WriteLine("Name:       {0}", profile.Name);
                 Console.WriteLine("Email:      {0}", profile.Email);
