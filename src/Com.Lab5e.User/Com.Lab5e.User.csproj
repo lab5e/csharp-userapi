@@ -12,7 +12,7 @@
     <Description>A library generated from a OpenAPI doc</Description>
     <Copyright>No Copyright</Copyright>
     <RootNamespace>Com.Lab5e.User</RootNamespace>
-    <Version>1.3.6</Version>
+    <Version>1.3.7</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Com.Lab5e.User.xml</DocumentationFile>
     <PackageLicenseExpression>BSD</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/lab5e/csharp-userapi.git</RepositoryUrl>
