@@ -360,3 +360,10 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+obj/
+bin/
+.openapi-generator/
+.vscode/
+git_push.sh
+
