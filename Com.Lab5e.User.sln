@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.Lab5e.User", "src\Com.Lab5e.User\Com.Lab5e.User.csproj", "{6241002D-002A-42CB-AED0-A50EE0799ECA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.Lab5e.User", "src\Com.Lab5e.User\Com.Lab5e.User.csproj", "{97461A79-C921-49B8-8BC3-E37710E59920}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.Lab5e.User.Test", "src\Com.Lab5e.User.Test\Com.Lab5e.User.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6241002D-002A-42CB-AED0-A50EE0799ECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6241002D-002A-42CB-AED0-A50EE0799ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6241002D-002A-42CB-AED0-A50EE0799ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6241002D-002A-42CB-AED0-A50EE0799ECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97461A79-C921-49B8-8BC3-E37710E59920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97461A79-C921-49B8-8BC3-E37710E59920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97461A79-C921-49B8-8BC3-E37710E59920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97461A79-C921-49B8-8BC3-E37710E59920}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
