@@ -27,25 +27,26 @@ using OpenAPIDateConverter = Com.Lab5e.User.Client.OpenAPIDateConverter;
 namespace Com.Lab5e.User.Model
 {
     /// <summary>
-    /// ProtobufAny
+    /// RequestInviteDetails
     /// </summary>
-    [DataContract(Name = "protobufAny")]
-    public partial class ProtobufAny : Dictionary<String, Object>, IEquatable<ProtobufAny>, IValidatableObject
+    [DataContract(Name = "Request_invite_details")]
+    public partial class RequestInviteDetails : IEquatable<RequestInviteDetails>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ProtobufAny" /> class.
+        /// Initializes a new instance of the <see cref="RequestInviteDetails" /> class.
         /// </summary>
-        /// <param name="type">type.</param>
-        public ProtobufAny(string type = default(string)) : base()
+        /// <param name="code">The invite code..</param>
+        public RequestInviteDetails(string code = default(string))
         {
-            this.Type = type;
+            this.Code = code;
         }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// The invite code.
         /// </summary>
-        [DataMember(Name = "@type", EmitDefaultValue = false)]
-        public string Type { get; set; }
+        /// <value>The invite code.</value>
+        [DataMember(Name = "code", EmitDefaultValue = false)]
+        public string Code { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,9 +55,8 @@ namespace Com.Lab5e.User.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ProtobufAny {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("class RequestInviteDetails {\n");
+            sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -65,7 +65,7 @@ namespace Com.Lab5e.User.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -77,24 +77,24 @@ namespace Com.Lab5e.User.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ProtobufAny);
+            return this.Equals(input as RequestInviteDetails);
         }
 
         /// <summary>
-        /// Returns true if ProtobufAny instances are equal
+        /// Returns true if RequestInviteDetails instances are equal
         /// </summary>
-        /// <param name="input">Instance of ProtobufAny to be compared</param>
+        /// <param name="input">Instance of RequestInviteDetails to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ProtobufAny input)
+        public bool Equals(RequestInviteDetails input)
         {
             if (input == null)
                 return false;
 
-            return base.Equals(input) && 
+            return 
                 (
-                    this.Type == input.Type ||
-                    (this.Type != null &&
-                    this.Type.Equals(input.Type))
+                    this.Code == input.Code ||
+                    (this.Code != null &&
+                    this.Code.Equals(input.Code))
                 );
         }
 
@@ -106,9 +106,9 @@ namespace Com.Lab5e.User.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = base.GetHashCode();
-                if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                int hashCode = 41;
+                if (this.Code != null)
+                    hashCode = hashCode * 59 + this.Code.GetHashCode();
                 return hashCode;
             }
         }

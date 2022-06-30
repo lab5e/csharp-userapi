@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 
 <a name="updatetoken"></a>
 # **UpdateToken**
-> Token UpdateToken (string token, Token body)
+> Token UpdateToken (string token, AnAPIToken body)
 
 Update token
 
@@ -360,7 +360,7 @@ namespace Example
 
             var apiInstance = new TokensApi(config);
             var token = token_example;  // string | The token  Use this in the `X-API-Token` header when using the API.
-            var body = new Token(); // Token | 
+            var body = new AnAPIToken(); // AnAPIToken | 
 
             try
             {
@@ -384,7 +384,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **token** | **string**| The token  Use this in the &#x60;X-API-Token&#x60; header when using the API. | 
- **body** | [**Token**](Token.md)|  | 
+ **body** | [**AnAPIToken**](AnAPIToken.md)|  | 
 
 ### Return type
 

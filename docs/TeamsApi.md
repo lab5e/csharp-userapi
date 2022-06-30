@@ -439,7 +439,7 @@ Name | Type | Description  | Notes
 
 <a name="generateinvite"></a>
 # **GenerateInvite**
-> Invite GenerateInvite (string teamId, InviteRequest body)
+> Invite GenerateInvite (string teamId, RequestInviteDetails body)
 
 Generate invite
 
@@ -468,7 +468,7 @@ namespace Example
 
             var apiInstance = new TeamsApi(config);
             var teamId = teamId_example;  // string | The team ID
-            var body = new InviteRequest(); // InviteRequest | 
+            var body = new RequestInviteDetails(); // RequestInviteDetails | 
 
             try
             {
@@ -492,7 +492,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamId** | **string**| The team ID | 
- **body** | [**InviteRequest**](InviteRequest.md)|  | 
+ **body** | [**RequestInviteDetails**](RequestInviteDetails.md)|  | 
 
 ### Return type
 
@@ -1016,7 +1016,7 @@ Name | Type | Description  | Notes
 
 <a name="updatemember"></a>
 # **UpdateMember**
-> Member UpdateMember (string teamId, string userId, Member body)
+> Member UpdateMember (string teamId, string userId, MemberOfATeam body)
 
 Update member
 
@@ -1046,7 +1046,7 @@ namespace Example
             var apiInstance = new TeamsApi(config);
             var teamId = teamId_example;  // string | 
             var userId = userId_example;  // string | 
-            var body = new Member(); // Member | 
+            var body = new MemberOfATeam(); // MemberOfATeam | 
 
             try
             {
@@ -1071,7 +1071,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamId** | **string**|  | 
  **userId** | **string**|  | 
- **body** | [**Member**](Member.md)|  | 
+ **body** | [**MemberOfATeam**](MemberOfATeam.md)|  | 
 
 ### Return type
 
@@ -1103,7 +1103,7 @@ Name | Type | Description  | Notes
 
 <a name="updateteam"></a>
 # **UpdateTeam**
-> Team UpdateTeam (string teamId, Team body)
+> Team UpdateTeam (string teamId, ATeam body)
 
 Update team
 
@@ -1132,7 +1132,7 @@ namespace Example
 
             var apiInstance = new TeamsApi(config);
             var teamId = teamId_example;  // string | 
-            var body = new Team(); // Team | 
+            var body = new ATeam(); // ATeam | 
 
             try
             {
@@ -1156,7 +1156,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamId** | **string**|  | 
- **body** | [**Team**](Team.md)|  | 
+ **body** | [**ATeam**](ATeam.md)|  | 
 
 ### Return type
 

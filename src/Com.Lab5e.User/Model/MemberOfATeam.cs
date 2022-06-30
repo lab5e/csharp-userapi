@@ -27,25 +27,33 @@ using OpenAPIDateConverter = Com.Lab5e.User.Client.OpenAPIDateConverter;
 namespace Com.Lab5e.User.Model
 {
     /// <summary>
-    /// ProtobufAny
+    /// MemberOfATeam
     /// </summary>
-    [DataContract(Name = "protobufAny")]
-    public partial class ProtobufAny : Dictionary<String, Object>, IEquatable<ProtobufAny>, IValidatableObject
+    [DataContract(Name = "Member_of_a_team")]
+    public partial class MemberOfATeam : IEquatable<MemberOfATeam>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ProtobufAny" /> class.
+        /// Initializes a new instance of the <see cref="MemberOfATeam" /> class.
         /// </summary>
-        /// <param name="type">type.</param>
-        public ProtobufAny(string type = default(string)) : base()
+        /// <param name="role">role.</param>
+        /// <param name="user">user.</param>
+        public MemberOfATeam(string role = default(string), UserProfile user = default(UserProfile))
         {
-            this.Type = type;
+            this.Role = role;
+            this.User = user;
         }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Gets or Sets Role
         /// </summary>
-        [DataMember(Name = "@type", EmitDefaultValue = false)]
-        public string Type { get; set; }
+        [DataMember(Name = "role", EmitDefaultValue = false)]
+        public string Role { get; set; }
+
+        /// <summary>
+        /// Gets or Sets User
+        /// </summary>
+        [DataMember(Name = "user", EmitDefaultValue = false)]
+        public UserProfile User { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,9 +62,9 @@ namespace Com.Lab5e.User.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ProtobufAny {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("class MemberOfATeam {\n");
+            sb.Append("  Role: ").Append(Role).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -65,7 +73,7 @@ namespace Com.Lab5e.User.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -77,24 +85,29 @@ namespace Com.Lab5e.User.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ProtobufAny);
+            return this.Equals(input as MemberOfATeam);
         }
 
         /// <summary>
-        /// Returns true if ProtobufAny instances are equal
+        /// Returns true if MemberOfATeam instances are equal
         /// </summary>
-        /// <param name="input">Instance of ProtobufAny to be compared</param>
+        /// <param name="input">Instance of MemberOfATeam to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ProtobufAny input)
+        public bool Equals(MemberOfATeam input)
         {
             if (input == null)
                 return false;
 
-            return base.Equals(input) && 
+            return 
                 (
-                    this.Type == input.Type ||
-                    (this.Type != null &&
-                    this.Type.Equals(input.Type))
+                    this.Role == input.Role ||
+                    (this.Role != null &&
+                    this.Role.Equals(input.Role))
+                ) && 
+                (
+                    this.User == input.User ||
+                    (this.User != null &&
+                    this.User.Equals(input.User))
                 );
         }
 
@@ -106,9 +119,11 @@ namespace Com.Lab5e.User.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = base.GetHashCode();
-                if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                int hashCode = 41;
+                if (this.Role != null)
+                    hashCode = hashCode * 59 + this.Role.GetHashCode();
+                if (this.User != null)
+                    hashCode = hashCode * 59 + this.User.GetHashCode();
                 return hashCode;
             }
         }
